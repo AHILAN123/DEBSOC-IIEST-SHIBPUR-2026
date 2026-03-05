@@ -535,6 +535,10 @@ nav {
   position: relative;
   padding-bottom: 20px;
 }
+  
+  html{
+  scroll-behavior:smooth;
+  }
 
 .contact-row::after {
   content: "";
@@ -547,6 +551,96 @@ nav {
   background: rgba(128,0,32,0.2);
 }
 
+/* Marquee animation */
+
+.animate-marquee{
+display:flex;
+width:max-content;
+animation:marquee 18s linear infinite;
+}
+
+@keyframes marquee{
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+}
+
+
+/* BECON alert ticker */
+
+.becon-alert{
+font-size:22px;
+font-weight:700;
+color:#800020;
+letter-spacing:2px;
+animation:beconTicker 12s linear infinite;
+}
+
+@keyframes beconTicker{
+0%{
+transform:translateX(100%);
+}
+
+100%{
+transform:translateX(-100%);
+}
+}
+
+.becon-ticker{
+width:100%;
+overflow:hidden;
+}
+
+.becon-track{
+display:flex;
+gap:120px;
+white-space:nowrap;
+animation:beconScroll 4s linear infinite;
+}
+
+.becon-track a{
+font-size:22px;
+font-weight:700;
+color:#800020;
+letter-spacing:2px;
+text-decoration:none;
+}
+
+@keyframes beconScroll{
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+}
+
+/* Floating bubble animation */
+
+.animate-float{
+animation: floatMove 8s ease-in-out infinite;
+}
+
+@keyframes floatMove{
+
+0%{
+transform: translateY(0px);
+}
+
+50%{
+transform: translateY(-18px);
+}
+
+100%{
+transform: translateY(0px);
+}
+
+}
 body {
   background-color: #FAF7F2;
   box-sizing: border-box;
