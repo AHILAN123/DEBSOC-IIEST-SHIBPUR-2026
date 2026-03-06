@@ -3,11 +3,23 @@
 // =============================================
 
 // ----- Mobile Menu -----
+const menu = document.getElementById("mobile-menu");
+const button = document.getElementById("hamburger-btn");
+
 function toggleMobileMenu() {
-  const menu = document.getElementById('mobile-menu');
-  menu.classList.toggle('hidden');
-  menu.classList.toggle('flex');
+  menu.classList.toggle("hidden");
 }
+
+document.addEventListener("click", function(event) {
+
+  const isClickInsideMenu = menu.contains(event.target);
+  const isClickOnButton = button.contains(event.target);
+
+  if (!isClickInsideMenu && !isClickOnButton) {
+    menu.classList.add("hidden");
+  }
+
+});
 
 // ----- About Us scroll / navigate -----
 function handleAboutClick() {
