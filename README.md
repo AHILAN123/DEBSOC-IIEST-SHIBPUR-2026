@@ -37,3 +37,4 @@ The project is built using fundamental web technologies to ensure compatibility 
 ├── js/                 # Script files for interactivity
 │   └── main.js
 └── pages/              # Additional pages (About, Events, Gallery)
+# DEBSOCDEPLOY
