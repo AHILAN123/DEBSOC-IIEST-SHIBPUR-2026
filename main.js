@@ -11,14 +11,17 @@ function toggleMobileMenu() {
 
 // ----- About Us scroll / navigate -----
 function handleAboutClick() {
-  // If already on homepage, just scroll
-  if (window.location.pathname.includes('homepage.html') ||
-      window.location.pathname.endsWith('/')) {
-    scrollToAbout();
+
+  const section = document.getElementById("about-section");
+
+  if (section) {
+    section.scrollIntoView({
+      behavior: "smooth"
+    });
   } else {
-    // Navigate to homepage then scroll via hash
-    window.location.href = 'homepage.html#about-section';
+    window.location.href = "index.html#about-section";
   }
+
 }
 
 function scrollToAbout() {
